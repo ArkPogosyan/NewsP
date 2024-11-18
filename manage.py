@@ -18,9 +18,10 @@ def main():
     if __name__ == "__main__":
         PORT = int(os.environ.get("PORT", 8000))
         print(f"Running server on port {PORT}")
-        run(host="0.0.0.0", port=PORT)
 
-    execute_from_command_line(sys.argv)
+    execute_from_command_line(['manage.py', 'runserver', f'0.0.0.0:{PORT}'])
+
+    # execute_from_command_line(sys.argv)
 
 if __name__ == '__main__':
     main()
